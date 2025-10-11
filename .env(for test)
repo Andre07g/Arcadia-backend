@@ -1,0 +1,6 @@
+THISISFOREXAMPLES="You should create an .env archive with this information to test your progress, these are not the real envs, this are provitional"
+
+MONGO_URI=mongodb://localhost:27017/
+DB_NAME=testpage
+PORT=4000
+HOST_NAME=localhost
