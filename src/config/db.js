@@ -9,7 +9,7 @@ let db;
 
 export async function connectDB() {
     try {
-        await cliente.connect();
+        await client.connect();
         console.log("DB connected!");
         db = client.db(db_name);
     } catch (error) {
