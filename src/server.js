@@ -1,6 +1,7 @@
 //imports
 import express from "express";
 import 'dotenv/config'
+import cors from "cors";
 import { connectDB } from "./config/db.js";
 import salesRouter from "./routes/sales.routes.js";
 // here you can put the imports of your routers
@@ -8,6 +9,7 @@ import salesRouter from "./routes/sales.routes.js";
 
 //Config
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 app.use("/sales", salesRouter);
