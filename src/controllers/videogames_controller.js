@@ -11,7 +11,7 @@ export async function getAllGames(req, res) {
 
 export async function getAGame(req, res) {
     try {
-        const id = parseInt(req.params.id);
+        const id = req.params.id;
         const game = await getGameById(id);
         if(!game) return res.status(404).json({error: "Game not found"});
         res.status(200).json(game)
@@ -31,7 +31,7 @@ export async function createAGame(req, res) {
 
 export async function updateAGame(req, res) {
     try {
-        const id = parseInt(req.params.id);
+        const id = req.params.id;
         const result = await updateGames(id, req.body);
         res.status(202).json(result);
     } catch (error) {
@@ -41,7 +41,7 @@ export async function updateAGame(req, res) {
 
 export async function deleteAGame(req, res) {
     try {
-        const id = parseInt(req.params.id);
+        const id = req.params.id;
         const result = await deleteGame(id);
         res.status(200).json(result);
     } catch (error) {
