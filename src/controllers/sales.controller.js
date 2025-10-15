@@ -23,8 +23,8 @@ export async function getSales_controller(req, res) {
 
 export async function getSale_controller(req, res) {
     try {
-        const _id = req.params._id
-        const result = await getSale(_id)
+        const { id } = req.params;
+        const result = await getSale(id)
         if (!result) {
             return res.status(404).json({ message: "Sale not found" });
         }
@@ -37,7 +37,7 @@ export async function getSale_controller(req, res) {
 
 export async function deleteSale_controller(req, res) {
     try {
-        const id = req.params._id
+        const { id } = req.params;
         const result = await deleteSale(id)
         if (!result) {
             return res.status(404).json({ message: "Sale not found to delete" });
