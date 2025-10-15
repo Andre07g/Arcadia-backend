@@ -1,11 +1,9 @@
 import { connectDB, getDB } from "../config/db.js";
 import { ObjectId } from "mongodb";
 const COLLECTION = "sales"
-const salesCollection = () => getDB().collection(COLLECTION);
 
 export async function createSale(data) {
-    try {
-        const {date, client, products, total} = data
+    const {date, client, products, total} = data
 
     const sale = {
         date,
@@ -14,47 +12,35 @@ export async function createSale(data) {
         total
     }
 
-    await salesCollection().insertOne(sale);
+    const db = getDB();
+    const result = await db.collection(COLLECTION).insertOne(sale);
     return {message: "Sale created successfully", sale}
-    } catch (error) {
-        return {message: "Error creating sale", error}
-    }
 }
 
 export async function getSales() {
-    try {
-        return await salesCollection().find().toArray();
-    } catch (error) {
-        return {message: "Error getting sales", error}
-    }
+    const db = getDB();
+    return await db.collection(COLLECTION).find().toArray();
 }
 
 export async function getSale(_id) {
-    try {
-        return await salesCollection().findOne({_id: ObjectId(_id)});
-    } catch (error) {
-        return {message: "Error getting sale", error}
-    }
+    const db = getDB();
+    return await db.collection(COLLECTION).findOne({_id: new ObjectId(_id)});
 }
 
 export async function updateSale(_id, data) {
-    try {
-        const result = await salesCollection().updateOne({_id: ObjectId(_id)}, {$set: data});
-        if (result.matchedCount > 0) {
-            return {message: "Sale updated successfully", sale: data}
-        }
-    } catch (error) {
-        return {message: "Error updating sale", error}
+    const db = getDB();
+    const result = await db.collection(COLLECTION).updateOne({_id: new ObjectId(_id)}, {$set: data});
+    if (result.matchedCount > 0) {
+        return {message: "Sale updated successfully", sale: data}
     }
+    return null;
 }
 
 export async function deleteSale(_id) {
-    try {
-        const result = await salesCollection().deleteOne({_id: ObjectId(_id)});
-        if (result.deletedCount > 0) {
-            return {message: "Sale deleted successfully"}
-        }
-    } catch (error) {
-        return {message: "Error deleting sale", error}
+    const db = getDB();
+    const result = await db.collection(COLLECTION).deleteOne({_id: new ObjectId(_id)});
+    if (result.deletedCount > 0) {
+        return {message: "Sale deleted successfully"}
     }
+    return null;
 }

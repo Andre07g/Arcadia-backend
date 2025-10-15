@@ -9,18 +9,18 @@ let db;
 
 export async function connectDB() {
     try {
-        await cliente.connect();
+        await client.connect();
         console.log("DB connected!");
         db = client.db(db_name);
     } catch (error) {
-        console.error("Error connecting to the DB", error)
+        console.error("Error connecting to the DB", error);
+        process.exit(1);
     }
 }
 
-export async function getDB() {
+export function getDB() {
     if(!db){
         throw new Error("Has not connected with the DB!");
     }
     return db;
 }
-
