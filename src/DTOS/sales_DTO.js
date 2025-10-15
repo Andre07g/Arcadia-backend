@@ -1,6 +1,6 @@
 import {param, body} from "express-validator";
 
-export const crerVenta_dto = [
+export const createSale_DTO = [
     body("fecha").isISO8601().toDate().withMessage("Date has to be ISO8601"),
     body("productos").isArray({min: 1}).withMessage("Minimum 1 product is required"),
     body("productos.*.nombre").isString().trim().notEmpty().withMessage("Product name is required"),
