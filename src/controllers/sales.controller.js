@@ -1,9 +1,9 @@
-import { createSale, getSale, getSales, deleteSale } from "../services/sales.services.js";
+import { createSaleWithTransaction, getSale, getSales, deleteSale } from "../services/sales.services.js";
 
 export async function createSale_controller(req, res) {
     try {
         const data = req.body;
-        const result = await createSale(data);
+        const result = await createSaleWithTransaction(data);
         res.status(201).json(result);
     } catch (error) {
         console.error("Error in createSale_controller:", error);

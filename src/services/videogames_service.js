@@ -39,3 +39,28 @@ export async function deleteGame(id){
     return {message:"Game was deleted"}
 
 }
+
+export async function updateGameStock(gameTitle, quantitySold, session) {
+    const db = getDB();
+    const collection = db.collection(COLLECTION_GAMES);
+
+    const game = await collection.findOne({ title: gameTitle }, { session });
+
+    if (!game) {
+        throw new Error(`El videojuego '${gameTitle}' no fue encontrado.`);
+    }
+
+    if (game.stock < quantitySold) {
+        // para verificar si no hay stoclk suficiente
+        throw new Error(`Stock insuficiente para '${gameTitle}'. Stock disponible: ${game.stock}, Cantidad solicitada: ${quantitySold}`);
+    }
+
+    
+    const result = await collection.updateOne(
+        { _id: new ObjectId(game._id) },
+        { $inc: { stock: -quantitySold } },
+        { session }
+    );
+
+    return result;
+}
