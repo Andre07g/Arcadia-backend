@@ -2,7 +2,7 @@
 import express from "express";
 import 'dotenv/config'
 import { connectDB } from "./config/db.js";
-import salesRouter from "./routes/sales.routes.js";
+import salesRouter from "./routers/sales.routes.js";
 // here you can put the imports of your routers
 import videogamesRouter from "./routers/videogames_router.js"
 import cors from 'cors'
