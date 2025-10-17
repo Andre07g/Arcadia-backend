@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "node src/server.js",
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
+    "swagger": "node ./src/docs/swagger.config.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,9 @@
     "mongodb": "^6.20.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "install": "^0.13.0",
+    "nodemon": "^3.1.10",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1"
   }
 }
