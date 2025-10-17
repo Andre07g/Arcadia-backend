@@ -15,6 +15,10 @@
     {
       "name": "Sales",
       "description": "Operaciones relacionadas con las ventas"
+    },
+    {
+      "name": "General",
+      "description": "Endpoints de información general y salud del servidor."
     }
   ],
   "schemes": [
@@ -27,7 +31,17 @@
     "application/json"
   ],
   "paths": {
-    "/": {
+    "/health": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/sales/": {
       "post": {
         "description": "",
         "responses": {
@@ -54,7 +68,7 @@
         }
       }
     },
-    "/{id}": {
+    "/sales/{id}": {
       "get": {
         "description": "",
         "parameters": [
@@ -98,6 +112,54 @@
             "description": "Internal Server Error"
           }
         }
+      }
+    },
+    "/videogames/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/videogames/{id}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
       },
       "patch": {
         "description": "",
@@ -115,6 +177,25 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           },
           "404": {
             "description": "Not Found"
