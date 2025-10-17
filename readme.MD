@@ -75,13 +75,13 @@ To install the backend developed and used by ARCADIA, follow these steps:
 
 The backend should now be running correctly
 
-## Endpoints utilizados 
+## Endpoints used
 
-A continuacion se muestran los endpoints utilizados en el backend y como funcionan.
+The following shows the endpoints used in the backend and how they work.
 
-### Crear videojuego
+### Create videogame
 
-**Método:** `POST`
+**Method:** `POST`
 
 **Endpoint:** 
 
@@ -99,9 +99,9 @@ localhost:4000/videogames
 
 <br>
 
-### Obtener videojuegos
+### Get videogames
 
-**Método:** `GET`
+**Method:** `GET`
 
 **Endpoint:** 
 
@@ -116,9 +116,9 @@ localhost:4000/videogames
     {
         "_id": "68f1c93354364f337476e8b6",
         "title": "Cosmic Odyssey: Starfall",
-        "genre": "RPG de Ciencia Ficción",
+        "genre": "Science Fiction RPG",
         "platform": "PC",
-        "description": "Una épica aventura espacial donde exploras galaxias inexploradas, tomas decisiones morales cruciales y lideras un equipo contra una antigua amenaza cósmica.",
+        "description": "An epic space adventure where you explore uncharted galaxies, make crucial moral decisions, and lead a team against an ancient cosmic threat.",
         "price": 5999,
         "image": "https://arcadia-games.com/images/cosmic-odyssey-starfall.jpg",
         "stock": 150
@@ -128,9 +128,9 @@ localhost:4000/videogames
 
 <br>
 
-### Editar videojuego
+### Edit videogame
 
-**Método:** `PATCH`
+**Method:** `PATCH`
 
 **Endpoint:** 
 
@@ -146,9 +146,9 @@ localhost:4000/videogames/68f1ca2c54364f337476e8b7
 }
 ```
 
-### Borrar videojuego
+### Delete videogame
 
-**Método:** `DELETE`
+**Method:** `DELETE`
 
 **Endpoint:** 
 
@@ -166,9 +166,9 @@ localhost:4000/videogames/68f1ca2c54364f337476e8b7
 
 ---
 
-### Crear venta
+### Create sale
 
-**Método:** `POST`
+**Method:** `POST`
 
 **Endpoint:** 
 
@@ -186,9 +186,9 @@ localhost:4000/sales
 
 <br>
 
-### Ver ventas
+### View sales
 
-**Método:** `GET`
+**Method:** `GET`
 
 ```bash
 localhost:4000/sales
@@ -222,5 +222,21 @@ localhost:4000/sales
 }
 ```
 
+## 🎨 Frontend repository link
+
+<p align="center">
+  <a href="https://github.com/Andre07g/Arcadia-front-end" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Arcadia%20Frontend-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="Arcadia Frontend repository" />
+  </a>
+</p>
 
 
+<p align="center">
+  <a href="https://github.com/Andre07g/Arcadia-front-end" target="_blank" rel="noopener noreferrer">https://github.com/Andre07g/Arcadia-front-end</a>
+</p>
+## 🧑‍🦱 Authors
+
+- **Joan Sebastián Gómez Serrano**
+- **Edgar Leal**
+- **Karolain Reyes**
+- **Michel Rodriguez**
