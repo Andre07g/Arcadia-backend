@@ -79,11 +79,148 @@ The backend should now be running correctly
 
 A continuacion se muestran los endpoints utilizados en el backend y como funcionan.
 
-### Crear cliente
+### Crear videojuego
 
-El siguiente endpoint es el que crea el cliente, los datos se transfieren mediante el body.
+**Método:** `POST`
 
 **Endpoint:** 
+
+```bash
+localhost:4000/videogames
+```
+
+**Result:**
+
+```json
+{
+    "message": "Game created successfully"
+}
+```
+
+<br>
+
+### Obtener videojuegos
+
+**Método:** `GET`
+
+**Endpoint:** 
+
+```json
+localhost:4000/videogames
+```
+
+**Result:**
+
+```json
+[
+    {
+        "_id": "68f1c93354364f337476e8b6",
+        "title": "Cosmic Odyssey: Starfall",
+        "genre": "RPG de Ciencia Ficción",
+        "platform": "PC",
+        "description": "Una épica aventura espacial donde exploras galaxias inexploradas, tomas decisiones morales cruciales y lideras un equipo contra una antigua amenaza cósmica.",
+        "price": 5999,
+        "image": "https://arcadia-games.com/images/cosmic-odyssey-starfall.jpg",
+        "stock": 150
+    }
+]
+```
+
+<br>
+
+### Editar videojuego
+
+**Método:** `PATCH`
+
+**Endpoint:** 
+
+```json
+localhost:4000/videogames/68f1ca2c54364f337476e8b7
+```
+
+**Result:**
+
+```json
+{
+    "message": "Game modified"
+}
+```
+
+### Borrar videojuego
+
+**Método:** `DELETE`
+
+**Endpoint:** 
+
+```json
+localhost:4000/videogames/68f1ca2c54364f337476e8b7
+```
+
+**Result:**
+
+```json
+{
+    "message": "Game was deleted"
+}
+```
+
+---
+
+### Crear venta
+
+**Método:** `POST`
+
+**Endpoint:** 
+
+```bash
+localhost:4000/sales
+```
+
+**Result:**
+
+```json
+{
+    "message": "Game created successfully"
+}
+```
+
+<br>
+
+### Ver ventas
+
+**Método:** `GET`
+
+```bash
+localhost:4000/sales
+```
+
+**Result:**
+
+```json
+{
+    "message": "Sale created successfully",
+    "sale": {
+        "date": "2025-10-17T12:00:00.000Z",
+        "client": "Aurelio González",
+        "products": [
+            {
+                "gameId": "653b6f1e5e9f8a2f4c3a2b1d",
+                "nombre": "Cosmic Odyssey: Starfall",
+                "precio": 5999,
+                "cantidad": 1
+            },
+            {
+                "gameId": "653b6f1e5e9f8a2f4c3a2b1e",
+                "nombre": "Speed Racer X",
+                "precio": 3499,
+                "cantidad": 2
+            }
+        ],
+        "total": 12997,
+        "_id": "68f1ce6c54364f337476e8b8"
+    }
+}
+```
 
 
 
