@@ -2,7 +2,9 @@
 import express from "express";
 import 'dotenv/config'
 import { connectDB } from "./config/db.js";
-import salesRouter from "./routers/sales.routes.js";
+import salesRouter from "./routers/sales.routes.js"; 
+import swaggerUi from 'swagger-ui-express'; 
+import swaggerFile from './docs/swagger-output.json' assert { type: 'json' };
 // here you can put the imports of your routers
 import videogamesRouter from "./routers/videogames_router.js"
 import cors from 'cors'
@@ -16,6 +18,8 @@ app.use("/sales", salesRouter);
 //Routers
 app.use("/videogames",videogamesRouter)
 //here you can call the router-imports to test them (don't upload this archive when you merge)
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 app.get("/health", (req, res)=>{
     res.status(200).json({message: "Backend on"});

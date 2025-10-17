@@ -1,3 +1,4 @@
+/* #swagger.ignore = true */
 import { Router } from "express";
  import { createGameDTO,updateGameDTO } from "../dtos/videogames_dto.js";
  import { validationDTO } from "../middlewares/validationDTO.js";

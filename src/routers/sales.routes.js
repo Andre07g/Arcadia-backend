@@ -1,3 +1,4 @@
+/* #swagger.ignore = true */
 import { Router } from "express";
 import { createSale_controller, getSales_controller, getSale_controller, deleteSale_controller} from "../controllers/sales.controller.js";
 import { validationDTO } from "../middlewares/validationDTO.js";
@@ -12,5 +13,3 @@ salesRouter.delete("/:id", deleteSale_controller)
 
 
 export default salesRouter
-
-
