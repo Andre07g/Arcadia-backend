@@ -39,6 +39,8 @@ We simplify the workflow to record and manage customer transactions:
   </a>
 </p>
 
+<br>
+
 ## 🔌 Installation
 
 To install the backend developed and used by ARCADIA, follow these steps:
@@ -47,20 +49,41 @@ To install the backend developed and used by ARCADIA, follow these steps:
 2. On the repository page, click the `Code` button.
 3. Click *Download ZIP*.
 
-![instruction_image](./Readme_images/instruction_1.png)
+<p align="center">
+  <img src="./Readme_images/instruction_1.png" alt="instruction_image" />
+</p>
 
 4. Once the ZIP file has been downloaded, unzip it.
 
 5. After extracting, open a CMD terminal and navigate to the folder where the extracted directory is located:
 
-![instruction_2](./Readme_images/instruction_2.png)
+<p align="center">
+  <img src="./Readme_images/instruction_2.png" alt="instruction_2" />
+</p>
 
 6. Install the required dependencies with `npm install`
 
-![instruction_3](./Readme_images/instruction_3.png)
+<p align="center">
+  <img src="./Readme_images/instruction_3.png" alt="instruction_3" />
+</p>
 
 7. Start the backend with `npm run dev`
 
-![instruction_4](./Readme_images/instruction_4.png)
+<p align="center">
+  <img src="./Readme_images/instruction_4.png" alt="instruction_4" />
+</p>
 
 The backend should now be running correctly
+
+## Endpoints utilizados 
+
+A continuacion se muestran los endpoints utilizados en el backend y como funcionan.
+
+### Crear cliente
+
+El siguiente endpoint es el que crea el cliente, los datos se transfieren mediante el body.
+
+**Endpoint:** 
+
+
+
