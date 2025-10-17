@@ -234,6 +234,7 @@ localhost:4000/sales
 <p align="center">
   <a href="https://github.com/Andre07g/Arcadia-front-end" target="_blank" rel="noopener noreferrer">https://github.com/Andre07g/Arcadia-front-end</a>
 </p>
+
 ## 🧑‍🦱 Authors
 
 - **Joan Sebastián Gómez Serrano**
