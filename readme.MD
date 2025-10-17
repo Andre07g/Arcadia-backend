@@ -105,7 +105,7 @@ localhost:4000/videogames
 
 **Endpoint:** 
 
-```json
+```bash
 localhost:4000/videogames
 ```
 
@@ -134,7 +134,7 @@ localhost:4000/videogames
 
 **Endpoint:** 
 
-```json
+```bash
 localhost:4000/videogames/68f1ca2c54364f337476e8b7
 ```
 
@@ -152,7 +152,7 @@ localhost:4000/videogames/68f1ca2c54364f337476e8b7
 
 **Endpoint:** 
 
-```json
+```bash
 localhost:4000/videogames/68f1ca2c54364f337476e8b7
 ```
 
