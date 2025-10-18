@@ -12,5 +12,3 @@ salesRouter.delete("/:id", deleteSale_controller)
 
 
 export default salesRouter
-
-
