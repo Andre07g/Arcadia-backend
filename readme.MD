@@ -47,6 +47,27 @@ We simplify the workflow to record and manage customer transactions:
 
 <br>
 
+## Environment variables
+
+Create a .env file in the project root with the following variables (replace values as needed):
+
+```env
+MONGO_URI=your_mongo_connection_string
+DB_NAME=arcadia_db
+PORT=4000
+HOST_NAME=localhost
+APIVERSION=v1
+MIN_RANGE=0
+```
+
+Notes:
+- MONGO_URI: MongoDB connection URI.
+- DB_NAME: Database name to use.
+- PORT: Server port (default 4000).
+- HOST_NAME: Hostname or IP (e.g., localhost).
+- APIVERSION: API version string (e.g., v1).
+- MIN_RANGE: Minimum allowed range value used by the app.
+
 ## 🔌 Installation
 
 To install the backend developed and used by ARCADIA, follow these steps:
@@ -72,6 +93,7 @@ To install the backend developed and used by ARCADIA, follow these steps:
 <p align="center">
   <img src="./Readme_images/instruction_3.png" alt="instruction_3" />
 </p>
+
 
 7. Start the backend with `npm run dev`
 
