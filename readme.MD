@@ -235,6 +235,30 @@ localhost:4000/sales
   <a href="https://github.com/Andre07g/Arcadia-front-end" target="_blank" rel="noopener noreferrer">https://github.com/Andre07g/Arcadia-front-end</a>
 </p>
 
+## Video demo — BACKEND
+
+<p align="center">
+  <a href="https://drive.google.com/file/d/1kUWlkTjag5Y-DgLmQEm1ZSLmVO0Bz-UH/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Watch%20Backend%20Demo-Google%20Drive-4285F4?style=for-the-badge&logo=google-drive&logoColor=white" alt="Backend demo" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://drive.google.com/file/d/1kUWlkTjag5Y-DgLmQEm1ZSLmVO0Bz-UH/view?usp=sharing" target="_blank" rel="noopener noreferrer">Open the Backend demo on Google Drive</a>
+</p>
+
+## Video demo — FULLSTACK
+
+<p align="center">
+  <a href="https://drive.google.com/file/d/13ITnhHI2zBhraZY30Fml1GNSei4ZxfTs/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Watch%20Fullstack%20Demo-Google%20Drive-4285F4?style=for-the-badge&logo=google-drive&logoColor=white" alt="Fullstack demo" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://drive.google.com/file/d/13ITnhHI2zBhraZY30Fml1GNSei4ZxfTs/view?usp=sharing" target="_blank" rel="noopener noreferrer">Open the Fullstack demo on Google Drive</a>
+</p>
+
 ## 🧑‍🦱 Authors
 
 - **Joan Sebastián Gómez Serrano**
