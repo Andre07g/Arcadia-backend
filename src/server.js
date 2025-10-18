@@ -4,7 +4,8 @@ import 'dotenv/config'
 import { connectDB } from "./config/db.js";
 import salesRouter from "./routers/sales.routes.js"; 
 import swaggerUi from 'swagger-ui-express'; 
-import swaggerFile from './docs/swagger-output.json' assert { type: 'json' };
+import fs from 'fs';
+const swaggerFile = JSON.parse(fs.readFileSync('./src/docs/swagger-output.json', 'utf-8'));
 // here you can put the imports of your routers
 import videogamesRouter from "./routers/videogames_router.js"
 import semver from 'semver';
