@@ -2,6 +2,12 @@
 
 # 🎮 Arcadia: The Best Video Game Site - BACKEND 🕹️
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Version-1.0.0-5865F2?style=for-the-badge&logo=github" alt="version" />
+</p>
+
+version: 1.0.0
+
 Arcadia is your ultimate destination in the gaming galaxy. More than a simple platform, we are a vibrant community and a resource hub designed by and for passionate gamers like you. Forget searching in a thousand places: here you have immediate access to the most relevant of the gaming universe.
 
 *This repository contains the backend for Arcadia.*
